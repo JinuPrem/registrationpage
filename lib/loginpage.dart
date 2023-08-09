@@ -7,21 +7,19 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Login",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Text("Login to your account"),
-            SizedBox(
+            const Text("Login to your account"),
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -46,7 +44,7 @@ class LoginPage extends StatelessWidget {
                     hintText: "Password"),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             SizedBox(
@@ -56,33 +54,33 @@ class LoginPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30))),
-                  child: Text("Login")),
+                  child: const Text("Login")),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             RichText(
                 text: TextSpan(
                     text: "Don't have an account?",
-                    style: TextStyle(color: Colors.blue),
+                    style: const TextStyle(color: Colors.blue),
                     children: <TextSpan>[
                   TextSpan(
                       text: "Sign up",
-                      recognizer: new TapGestureRecognizer()..onTap = () => {
+                      recognizer: TapGestureRecognizer()..onTap = () =>
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => SignUp()),
-                        )
-                      },
-                      style: TextStyle(
+                            builder: (context) => const SignUp()),
+                        ),
+
+                      style: const TextStyle(
                           fontWeight: FontWeight.bold, color: Colors.blue))
                 ])),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
             Container(
               height: 200,
               width: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
                         "images/businessman-is-trying-to-unlock-door-vector-25241041.jpg")),
@@ -90,7 +88,7 @@ class LoginPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
+
   }
 }
